@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fizz - Buzz In JavaScript</title>
+    <title>Document</title>
 </head>
 <body>
+    <input id="numbers" type="text">
+    <button id="submit">Submit</button>
+    <br><br>
+    <div id="result"></div>
     <script>
-        for (var i = 1; i <= 1000; i++) {
-  var message = '';
-  if (i%3 === 0) message += 'fizz';
-  if (i%5 === 0) message += 'buzz';
-  document.write('<br>'); 
-  document.write(message || i);
+        let input = document.getElementById("numbers");
+let submit = document.getElementById("submit");
+var result = document.getElementById("result");
+
+submit.addEventListener('click', function(){
+   var value = numbers.value;
+   value = parseInt(value);
+   print(value);
+})
+function print(n){
+for(let i = 0; i<=n; i++){
+    if(i%15===0){
+        result.innerHTML="FizzBuzz";
+    }
+    else if(i%3===0){
+        result.innerHTML="Fizz";
+    }
+    else if(i%5===0){
+        result.innerHTML="Buzz";
+    }
+    else{
+        result.innerHTML=i;
+    }
+}
 }
     </script>
 </body>
